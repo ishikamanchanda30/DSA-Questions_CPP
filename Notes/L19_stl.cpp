@@ -55,7 +55,7 @@ int main()
 
     // check capacity (total kitne element ke liye memory allocate kari hai)
     cout << "Size : " << v.size() << endl;
-    cout << "Capacity : " << v.capacity() << endl;
+    cout << "Capacity : " << v.capacity() << endl; 
 
     v.push_back(22);
 
