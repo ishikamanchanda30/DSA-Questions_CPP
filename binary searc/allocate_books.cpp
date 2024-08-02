@@ -5,7 +5,6 @@ bool IsPossible(int arr[], int n, int m, int mid)
 {
     int student = 1;
     int pagesum = 0;
-
     for (int i = 0; i < n; i++)
     {
         if (pagesum + arr[i] <= mid)

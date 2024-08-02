@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include <algorithm>
 #include <vector>
 using namespace std;
@@ -27,22 +26,18 @@ int EkoSpoj(vector<int>arr,int n,int m) {
     int e=*max_element(arr.begin(),arr.end());
     int mid = s + (e - s)/2;
     int ans = -1;
-    // cout <<"---------VERY BEGINNING---------\n\n";
-    // cout<< "START : " << s << " MIDDLE : " << mid<< " END : " << e;
+
     while(s<=e) {
         if (isPossible(arr,n,m,mid)) {
             ans = mid;
             s= mid +1;
-            // cout << " --- IF --- \nANSWER : " << ans << "  START : " << s << "MIDDLE : " << mid << " END : " << e;
-
         }
-        else {
+        else 
             e = mid - 1;
-            // cout << " --- ELSE --- \nANSWER : " << ans << "  START : " << s << "MIDDLE : " << mid << " END : " << e;
-        } 
+   
         mid = s + (e - s)/2;
 
-        // cout <<"\nUPDATED MIDDLE : " <<mid;
+        
 
     }
     return ans;

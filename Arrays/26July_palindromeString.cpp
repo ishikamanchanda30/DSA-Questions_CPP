@@ -1,29 +1,34 @@
-#include <iostream>
+#include <iostream> 
+#include <algorithm>
+
 using namespace std;
 
-bool CheckPalindrome(char stri[]) {
-    int len = getLength(stri);
-    cout << len;
-    int start = 0;
-    int end = len - 1;
-    int mid = (start + end)/2;
-    while (start < mid) {
-        if (stri[start] != stri[end]) {
-            cout << stri[start] << " " << stri[end];
-            return 0;
-        }
-        else {
-            start++;
-            end--;
-        }
+int getLength(char strin[]) {
+    int length = 0;
+    while (strin[length] != '\0') {
+        length++;
     }
-    return 1;   
-
+    return length;
 }
+
+bool CheckPalin(char a[]){
+    int e = getLength(a)-1;
+    int s = 0;
+    while( s <=e) {
+        if(a[s] != a[e]) {
+            return false;
+        }
+        s++;
+        e--;        
+    }
+    return true;
+}
+
+
 
 int main() {
     char s[20];
     cin >> s;
-    cout << CheckPalindrome(s) <<endl;
+    cout << CheckPalin(s);
 
 }
