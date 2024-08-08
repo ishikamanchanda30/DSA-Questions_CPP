@@ -1,48 +1,34 @@
 #include <iostream>
-
-// INclude another file which has class
+// Include another file which has class
 #include "enemy.cpp"
 using namespace std;
-
 // How to create a 'class'
-
 class Hero{
-
     // Properties
     private:
     int health; 
-
     public:
     char level;
-
     // Create a Getter
 
     int gethealth() {
         return health;
     }
-
     char getlevel() {
         return level;
     }
-
     // Create Setters 
-
     void sethealth(int h) {
         health = h;
     }
-
     void setLevel(char level) {
         level = 'V';
     }
-
-    
-
 };
 
 int main() {
     // printing 
     // creating an object from class
-
     Enemy e;
     Hero h;
 
@@ -64,8 +50,7 @@ int main() {
 
     cout << "Health is : " << h.gethealth() << endl;
     cout << "Level is : " << h.level <<endl;
-
-
+    
     /* cout << "Health is : " << h.health <<endl;
     cout << "Level is : " << h.level <<endl;
     cout << "Name is : " << h.name <<endl;
